@@ -3,6 +3,8 @@ spring:
   profiles: default
 eureka:
   instance:
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 6
     hostname: localhost
     prefer-ip-address: true
   client:
