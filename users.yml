@@ -1,2 +1,14 @@
 ---
 ping-server: google.com
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: users
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka
+spring:
+  profiles: default
+
+server:
+  port: 0
