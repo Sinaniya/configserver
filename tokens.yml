@@ -1,3 +1,16 @@
 ---
+ping-server: google.com
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 6
+    instance-id: ${spring.application.name}:${server.port}:${random.value}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka
+spring:
+  profiles: default
+
 server:
   port: 0
