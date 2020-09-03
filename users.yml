@@ -24,6 +24,21 @@ spring:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.H2Dialect
+  cloud:
+    bus:
+      enabled: true
+  
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 server:
   port: 0
