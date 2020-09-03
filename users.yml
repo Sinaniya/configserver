@@ -1,5 +1,5 @@
 ---
-ping-server: yahoo.com
+ping-server: google.com
 eureka:
   instance:
     prefer-ip-address: true
