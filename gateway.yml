@@ -7,6 +7,19 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:7000/eureka
-      
+
+
+zuul:
+  routes:
+    usersapi:
+      serviceId: users
+      path: /usersapi/**
+      stripPrefix: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
 server:
   port: 8000
