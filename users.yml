@@ -42,5 +42,3 @@ management:
 
 server:
   port: 0
-  
-  
