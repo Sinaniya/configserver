@@ -34,11 +34,18 @@ spring:
     host: localhost
     port: 5672
     
+  kafka:
+    producer:
+      bootstrap-servers: 127.0.0.1:9092, 127.0.0.1:9093
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer    
+    
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+        
 
 server:
   port: 0
