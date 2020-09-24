@@ -34,6 +34,14 @@ spring:
     host: localhost
     port: 5672
     
+  kafka:
+    consumer:
+      enable-auto-commit: true
+      bootstrap-servers: 127.0.0.1:9092, 127.0.0.1:9093
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: "token"  
+    
 management:
   endpoints:
     web:
